@@ -1,6 +1,8 @@
-/* ------------------- Modals ------------------- */
+/* ------------------- modals.css ------------------- */
+/* Styles for modal windows (popups) */
+
 .modal {
-  display: none;
+  display: none; /* Hidden by default */
   position: fixed;
   z-index: 2000;
   left: 0;
@@ -8,11 +10,11 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.4); /* dark overlay */
+  background-color: rgba(0,0,0,0.4); /* Semi-transparent overlay */
 }
 
 .modal-content {
-  background-color: #F4F4ED;
+  background-color: #F4F4ED; /* Match site background */
   margin: 50px auto;
   padding: 30px;
   border-radius: 20px;
@@ -22,7 +24,7 @@
   animation: slideDown 0.3s ease;
 }
 
-/* Close Button */
+/* Close button */
 .close {
   color: #2F4F4F;
   float: right;
@@ -35,7 +37,7 @@
   color: #A3B18A;
 }
 
-/* Slide down animation */
+/* Animation for modal appearing */
 @keyframes slideDown {
   from { transform: translateY(-50px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
