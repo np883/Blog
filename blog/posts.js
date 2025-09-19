@@ -1,5 +1,3 @@
-// blog/posts.js
-
 const posts = [
   {
     title: "My First Blog Post",
@@ -12,6 +10,6 @@ const posts = [
     file: "post2.html",
     date: "September 20, 2025",
     preview: "Today I learned how to structure a website using HTML, CSS, and JS..."
-  },
-  // Add new posts here easily
+  }
+  // Add new posts here
 ];
