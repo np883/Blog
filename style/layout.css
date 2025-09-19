@@ -1,0 +1,19 @@
+/* ------------------- Layout ------------------- */
+section {
+  padding: 40px 20px;
+}
+
+/* Max width for content */
+section#tiles,
+section#blogHome,
+section#featuredBlog,
+section#contact {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* General grid container class */
+.grid-container {
+  display: grid;
+  gap: 25px;
+}
