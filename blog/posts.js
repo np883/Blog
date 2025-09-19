@@ -1,22 +1,23 @@
-/* ------------------- Blog Posts Data ------------------- */
-
+/* ------------------- posts.js ------------------- */
 /*
-  This file contains an array called "posts".
+  This file contains an array called "posts" which stores all blog post data.
   Each post is an object with the following properties:
-    - title: The title of the post (shown on homepage, blog page, and post page)
-    - date: Date of the post (displayed under title)
-    - preview: Short preview text for homepage/blog card
-    - file: Path to the individual blog post HTML file
-    - image: Optional image for the post card / featured post
+
+  - title: The title of the blog post
+  - date: The publication date (displayed under the title)
+  - preview: A short preview or teaser text for the homepage/blog homepage
+  - file: The filename of the individual blog post HTML page
+  - image: Optional URL to an image representing the post (used in cards)
 */
 
+/* Example blog posts array */
 const posts = [
   {
-    title: "My First Blog Post",                 // Post title
-    date: "2025-09-19",                          // Date of publication
-    preview: "This is a short preview of my first blog post. Click to read more...", // Short teaser text
-    file: "post1.html",                          // Path to individual post page
-    image: "https://via.placeholder.com/300x180?text=Post+1" // Optional image URL
+    title: "My First Blog Post",                  // Post title
+    date: "2025-09-19",                           // Date of publication
+    preview: "This is a short preview of my first blog post. Click to read more...", // Teaser text
+    file: "post1.html",                           // Path to the post file
+    image: "https://via.placeholder.com/300x180?text=Post+1" // Optional image
   },
   {
     title: "Learning Web Development",
@@ -35,35 +36,32 @@ const posts = [
 ];
 
 /*
-  ================= USAGE =================
-  
-  1. Homepage "Featured Posts" section:
-      - Script will slice the first 2–3 posts:
-          const featuredPosts = posts.slice(0,3);
-      - Create a card for each featured post.
-  
-  2. Blog homepage:
-      - Loop through "posts" array.
-      - For each post, create a card containing:
-          - Image (if available)
-          - Title linking to "file"
-          - Date
-          - Preview text
-  
-  3. Adding a new post:
-      - Copy an object and add to the array
-      - Update title, date, preview, file, image
-      - Create corresponding HTML post file
-      - The homepage and blog page will automatically include it
-*/
+================ USAGE =================
 
-/* ================= EXAMPLE: Adding a new post ================= */
-/*
-posts.push({
-  title: "New Blog Post",
-  date: "2025-09-20",
-  preview: "A quick summary of the new post.",
-  file: "post4.html",
-  image: "https://via.placeholder.com/300x180?text=Post+4"
-});
+1. Featured Posts on Homepage:
+   - In blog.js, we slice the first 2–3 posts from this array and create HTML cards dynamically.
+   - Example: const featuredPosts = posts.slice(0, 3);
+
+2. Blog Homepage (blog/index.html):
+   - Loop through the 'posts' array and create a card for each post.
+   - Each card displays image (if available), title, date, and preview text.
+
+3. Adding a New Blog Post:
+   - Create a new HTML post page (e.g., post4.html).
+   - Add a new object to this array:
+     posts.push({
+       title: "New Post Title",
+       date: "YYYY-MM-DD",
+       preview: "Short teaser text",
+       file: "post4.html",
+       image: "https://via.placeholder.com/300x180?text=Post+4"
+     });
+   - The homepage and blog homepage automatically include it.
+
+4. Optional Enhancements:
+   - You can include categories or tags by adding extra properties to the objects.
+   - You could sort posts dynamically by date for newest first.
+
+This modular structure allows your blog to scale easily, and new posts appear automatically
+on both the homepage (featured) and blog homepage.
 */
