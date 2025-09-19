@@ -1,0 +1,13 @@
+/* ========== General Section Styling ========== */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+section:nth-child(even) {
+  background-color: #E6F0D4; /* Light sage for alternating */
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
