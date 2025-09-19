@@ -1,36 +1,37 @@
-/* ------------------- Gallery Logic ------------------- */
+/* ------------------- gallery.js ------------------- */
+/* Controls the gallery modal image navigation */
 
 let currentImageIndex = 0;
 
-// Example gallery images array
+/* Array of gallery images */
 const galleryImages = [
-  'https://via.placeholder.com/300x200?text=1',
-  'https://via.placeholder.com/300x200?text=2',
-  'https://via.placeholder.com/300x200?text=3'
+  'images/gallery1.jpg',
+  'images/gallery2.jpg',
+  'images/gallery3.jpg'
 ];
 
-// Update gallery image
+/* Display a specific image in the gallery */
 function showImage(index) {
   const imgElement = document.getElementById('galleryImage');
-  if(imgElement) {
+  if (imgElement) {
     imgElement.src = galleryImages[index];
     currentImageIndex = index;
   }
 }
 
-// Next image
+/* Navigate to the next image */
 function nextImage() {
   const nextIndex = (currentImageIndex + 1) % galleryImages.length;
   showImage(nextIndex);
 }
 
-// Previous image
+/* Navigate to the previous image */
 function previousImage() {
   const prevIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
   showImage(prevIndex);
 }
 
-// Initialize gallery on page load
+/* Initialize gallery on page load */
 window.addEventListener('DOMContentLoaded', () => {
   showImage(currentImageIndex);
 });
