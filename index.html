@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Website</title>
+
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <!-- Internal CSS -->
+    <style>
+      /* Global Styles */
+      body {
+        font-family: 'Roboto', Arial, sans-serif;
+        margin: 0;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      /* Navigation Bar */
+      nav {
+        background-color: #1e3a8a;
+        padding: 15px 0;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 20px;
+        font-weight: 600;
+        font-size: 16px;
+      }
+      nav a:hover {
+        color: #ffdd57;
+      }
+
+      /* Sections */
+      section {
+        padding: 60px 20px;
+        margin: 20px auto;
+        max-width: 900px;
+        border-radius: 15px;
+        background-color: white;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+      }
+      section:hover {
+        transform: translateY(-5px);
+      }
+
+      /* Headings */
+      h1 {
+        color: #1e3a8a;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+      h2 {
+        color: #1e40af;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+      p, li, label {
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      /* Buttons */
+      button {
+        background-color: #1e3a8a;
+        color: white;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin-top: 10px;
+      }
+      button:hover {
+        background-color: #3b82f6;
+        transform: translateY(-2px);
+      }
+
+      /* Forms */
+      form {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+      }
+      input, textarea {
+        padding: 12px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 1rem;
+        width: 100%;
+      }
+      textarea {
+        resize: vertical;
+      }
+
+      /* Gallery Images */
+      #gallery img {
+        max-width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+      }
+      #gallery img:hover {
+        transform: scale(1.05);
+      }
+
+      /* Section Background Colors */
+      #home { background-color: #dbeafe; }
+      #hobbies { background-color: #d1fae5; }
+      #websites { background-color: #ffe4e6; }
+      #gallery { background-color: #fed7aa; }
+      #contact { background-color: #e0f2fe; }
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation Menu -->
+    <nav>
+      <a href="#home">Home</a> |
+      <a href="#hobbies">Hobbies</a> |
+      <a href="#websites">Websites</a> |
+      <a href="#gallery">Gallery</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+      <h1>Welcome to My Website</h1>
+      <p>Hi! My name is [Your Name]. I am learning web development.</p>
+
+      <!-- Profile Image -->
+      <img src="https://via.placeholder.com/200" alt="My Profile Picture" width="200">
+
+      <!-- Interactive Buttons -->
+      <button onclick="alert('Hello! Thanks for visiting my website.')">Click Me!</button>
+      <button onclick="toggleHobbies()">Show/Hide Hobbies</button>
+    </section>
+
+    <!-- Hobbies Section -->
+    <section id="hobbies">
+      <h2>My Hobbies</h2>
+      <ul>
+        <li>Reading</li>
+        <li>Gaming</li>
+        <li>Coding</li>
+      </ul>
+    </section>
+
+    <!-- Websites Section -->
+    <section id="websites">
+      <h2>My Favorite Websites</h2>
+      <ol>
+        <li><a href="https://www.google.com" target="_blank">Google</a></li>
+        <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+        <li><a href="https://www.wikipedia.org" target="_blank">Wikipedia</a></li>
+      </ol>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <h2>My Gallery</h2>
+      <img id="galleryImage" src="https://via.placeholder.com/200?text=1" alt="Gallery Image">
+      <br>
+      <button onclick="previousImage()">Previous</button>
+      <button onclick="nextImage()">Next</button>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+      // Toggle Hobbies Section
+      function toggleHobbies() {
+        const hobbiesSection = document.getElementById('hobbies');
+        if (hobbiesSection.style.display === 'none') {
+          hobbiesSection.style.display = 'block';
+        } else {
+          hobbiesSection.style.display = 'none';
+        }
+      }
+
+      // Gallery Functionality
+      const images = [
+        'https://via.placeholder.com/200?text=1',
+        'https://via.placeholder.com/200?text=2',
+        'https://via.placeholder.com/200?text=3'
+      ];
+      let currentIndex = 0;
+      function showImage(index) {
+        document.getElementById('galleryImage').src = images[index];
+      }
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+      }
+      function previousImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+      }
+
+      // Contact Form Submission
+      const contactForm = document.getElementById('contactForm');
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        alert(`Thank you, ${name}! Your message has been sent.\n\nEmail: ${email}\nMessage: ${message}`);
+        contactForm.reset();
+      });
+    </script>
+  </body>
+</html>
+
