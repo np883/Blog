@@ -1,0 +1,25 @@
+{
+  "current": [
+    {
+      "name": "Cozy Reading Blanket",
+      "category": "Books & Comfort",
+      "image": "../images/favourites/blanket.jpg",
+      "link": "https://www.amazon.com/example-blanket"
+    },
+    {
+      "name": "Watercolor Journal",
+      "category": "Stationery",
+      "image": "../images/favourites/journal.jpg",
+      "link": "https://www.amazon.com/example-journal"
+    }
+  ],
+  "archive": [
+    {
+      "name": "Vintage Tea Set",
+      "category": "Home & Decor",
+      "month": "August 2025",
+      "image": "../images/favourites/teaset.jpg",
+      "link": "https://www.amazon.com/example-teaset"
+    }
+  ]
+}
