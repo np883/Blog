@@ -4,7 +4,13 @@
   <title>My Cozy Cottagecore Website</title>
   <!-- Google Fonts for whimsical serif style -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <!-- Modular CSS -->
+  <link rel="stylesheet" href="style/base.css">
+  <link rel="stylesheet" href="style/layout.css">
+  <link rel="stylesheet" href="style/tiles.css">
+  <link rel="stylesheet" href="style/modals.css">
+  <link rel="stylesheet" href="style/featured.css">
+  <link rel="stylesheet" href="style/contact.css">
 </head>
 <body>
 
@@ -43,7 +49,6 @@
   </section>
 
   <!-- ================= Modals ================= -->
-
   <!-- About Me Modal -->
   <div id="aboutModal" class="modal">
     <div class="modal-content">
@@ -89,6 +94,13 @@
     </div>
   </div>
 
+  <!-- ================= Featured Blog Posts ================= -->
+  <section id="featuredBlog">
+    <h2>Latest Blog Posts</h2>
+    <p>Check out my latest thoughts and web projects:</p>
+    <div id="featuredPostsContainer" class="featured-posts-grid"></div>
+  </section>
+
   <!-- ================= Contact Section ================= -->
   <section id="contact">
     <h2>Contact Me</h2>
@@ -107,27 +119,11 @@
   </section>
 
   <!-- ================= Scripts ================= -->
-  <script src="script.js"></script>
-  <script>
-    // Open a modal
-    function openModal(modalId) {
-      document.getElementById(modalId).style.display = 'block';
-    }
+  <script src="script/modals.js"></script>
+  <script src="script/gallery.js"></script>
+  <script src="blog/posts.js"></script>
+  <script src="script/blog.js"></script>
+  <script src="script/main.js"></script>
 
-    // Close a modal
-    function closeModal(modalId) {
-      document.getElementById(modalId).style.display = 'none';
-    }
-
-    // Close modal when clicking outside content
-    window.onclick = function(event) {
-      const modals = document.querySelectorAll('.modal');
-      modals.forEach(modal => {
-        if (event.target === modal) {
-          modal.style.display = 'none';
-        }
-      });
-    }
-  </script>
 </body>
 </html>
