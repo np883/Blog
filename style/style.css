@@ -1,31 +1,22 @@
-/* Main stylesheet - imports modular styles for organization */
+/* Master stylesheet - imports modular styles */
 
-/* Global base styles */
+/* Base styles (colors, fonts, reset, utilities) */
 @import url('base.css');
 
-/* Banner navigation */
-@import url('banner.css');
+/* Homepage (banner, sections, social, footer) */
+@import url('homepage.css');
 
-/* Section layout */
-@import url('sections.css');
-
-/* Gallery */
-@import url('gallery.css');
-
-/* Blog */
+/* Blog page */
 @import url('blog.css');
 
-/* Reviews (book reviews, stars, filters) */
+/* Reviews page */
 @import url('reviews.css');
 
-/* Current Favourites */
+/* Favourites page */
 @import url('favourites.css');
 
-/* Contact Form */
+/* Gallery page */
+@import url('gallery.css');
+
+/* Contact section/page */
 @import url('contact.css');
-
-/* Social Media icons */
-@import url('social.css');
-
-/* Footer */
-@import url('footer.css');
