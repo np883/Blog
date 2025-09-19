@@ -19,3 +19,39 @@ section#contact,
   display: grid;
   gap: 25px;
 }
+
+/* ------------------- Banner Styles ------------------- */
+#siteBanner {
+  background: linear-gradient(to right, #A3B18A, #E6F0D4); /* Sage to light green */
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+/* Optional subtle foliage overlay */
+#siteBanner::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('../images/leaf-pattern.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.05;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  pointer-events: none;
+}
+
+.banner-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #2F4F4F;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  color: #2F4F4F;
+}
