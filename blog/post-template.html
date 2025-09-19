@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>[Post Title Here]</title>
-  <link rel="stylesheet" href="../style.css">
+  <title>My First Blog Post</title>
+  <!-- Google Fonts for whimsical serif style -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Modular CSS -->
+  <link rel="stylesheet" href="../style/base.css">
+  <link rel="stylesheet" href="../style/layout.css">
+  <link rel="stylesheet" href="../style/blog.css">
 </head>
 <body>
 
+  <!-- ================= Navigation ================= -->
   <nav>
-    <a href="../index.html#home">Home</a> |
+    <a href="../index.html#tiles">Home</a> |
     <a href="index.html">Blog</a>
   </nav>
 
-  <section>
-    <h1>[Post Title Here]</h1>
-    <p><em>Posted on [Date Here]</em></p>
+  <!-- ================= Blog Post Content ================= -->
+  <section id="blogPost" class="single-post">
+    <h1>My First Blog Post</h1>
+    <p><em>September 19, 2025</em></p>
+    <img src="https://via.placeholder.com/600x300?text=Post+1+Image" alt="Blog Post Image" class="post-image">
 
-    <p>[Write your post content here]</p>
-    <p>[Add more paragraphs, images, or lists]</p>
+    <div class="post-content">
+      <p>Welcome to my very first blog post! Today I’m sharing my journey into web development and cozy cottagecore aesthetics.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus id risus et sapien bibendum sollicitudin. Curabitur fringilla mi ut sapien pharetra, in facilisis velit porttitor.</p>
+      <p>Stay tuned for more posts about coding, cozy web design tips, and whimsical inspirations!</p>
+    </div>
 
+    <!-- Optional navigation to next/previous post -->
+    <div class="post-nav">
+      <a href="post2.html">&larr; Next Post</a>
+    </div>
   </section>
 
 </body>
 </html>
-
