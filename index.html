@@ -2,15 +2,17 @@
 <html>
 <head>
   <title>My Cozy Cottagecore Website</title>
+
   <!-- Google Fonts for whimsical serif style -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Modular CSS -->
-  <link rel="stylesheet" href="style/base.css">
-  <link rel="stylesheet" href="style/layout.css">
-  <link rel="stylesheet" href="style/tiles.css">
-  <link rel="stylesheet" href="style/modals.css">
-  <link rel="stylesheet" href="style/featured.css">
-  <link rel="stylesheet" href="style/contact.css">
+
+  <!-- Modular CSS files -->
+  <link rel="stylesheet" href="style/base.css">        <!-- Global styles (fonts, body, headings) -->
+  <link rel="stylesheet" href="style/layout.css">      <!-- Grid & section layouts -->
+  <link rel="stylesheet" href="style/tiles.css">       <!-- Homepage tiles -->
+  <link rel="stylesheet" href="style/modals.css">      <!-- Modals styling -->
+  <link rel="stylesheet" href="style/featured.css">    <!-- Featured blog posts -->
+  <link rel="stylesheet" href="style/contact.css">     <!-- Contact form -->
 </head>
 <body>
 
@@ -21,27 +23,24 @@
     <a href="blog/index.html">Blog</a>
   </nav>
 
-  <!-- ================= Tile Grid ================= -->
+  <!-- ================= Homepage Tiles ================= -->
   <section id="tiles">
-    <!-- About Me Tile -->
+    <!-- Each tile opens a modal -->
     <div class="tile" onclick="openModal('aboutModal')">
       <h2>About Me</h2>
       <p>Click to learn more about me!</p>
     </div>
 
-    <!-- Hobbies Tile -->
     <div class="tile" onclick="openModal('hobbiesModal')">
       <h2>Hobbies</h2>
       <p>Click to explore my favorite pastimes!</p>
     </div>
 
-    <!-- Gallery Tile -->
     <div class="tile" onclick="openModal('galleryModal')">
       <h2>Gallery</h2>
       <p>Click to view my cozy snapshots!</p>
     </div>
 
-    <!-- Blog Tile -->
     <div class="tile" onclick="openModal('blogModal')">
       <h2>Blog</h2>
       <p>Click to read my latest posts!</p>
@@ -55,7 +54,7 @@
       <span class="close" onclick="closeModal('aboutModal')">&times;</span>
       <h2>About Me</h2>
       <p>Hi! I'm [Your Name], a cozy web developer exploring whimsical and cottagecore designs.</p>
-      <img src="https://via.placeholder.com/200" alt="Profile Picture">
+      <img src="images/profile.jpg" alt="Profile Picture">
     </div>
   </div>
 
@@ -77,7 +76,7 @@
     <div class="modal-content">
       <span class="close" onclick="closeModal('galleryModal')">&times;</span>
       <h2>Gallery</h2>
-      <img id="galleryImage" src="https://via.placeholder.com/300x200?text=1" alt="Gallery Image">
+      <img id="galleryImage" src="images/gallery1.jpg" alt="Gallery Image">
       <div class="gallery-buttons">
         <button onclick="previousImage()">Previous</button>
         <button onclick="nextImage()">Next</button>
@@ -98,6 +97,7 @@
   <section id="featuredBlog">
     <h2>Latest Blog Posts</h2>
     <p>Check out my latest thoughts and web projects:</p>
+    <!-- Container for dynamically loaded featured posts -->
     <div id="featuredPostsContainer" class="featured-posts-grid"></div>
   </section>
 
@@ -119,6 +119,7 @@
   </section>
 
   <!-- ================= Scripts ================= -->
+  <!-- Modular JS files -->
   <script src="script/modals.js"></script>
   <script src="script/gallery.js"></script>
   <script src="blog/posts.js"></script>
