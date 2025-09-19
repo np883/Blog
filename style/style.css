@@ -1,73 +1,31 @@
-#socialLinks {
-  text-align: center;
-  padding: 30px 0;
-}
+/* Main stylesheet - imports modular styles for better organization */
 
-#socialLinks h2 {
-  margin-bottom: 15px;
-}
+/* Global + typography */
+@import url('css/base.css');
 
-.social-icons a {
-  margin: 0 10px;
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
+/* Top banner navigation */
+@import url('css/banner.css');
 
-.social-icons a:hover {
-  transform: scale(1.2);
-}
+/* Section layout */
+@import url('css/sections.css');
 
-.social-icons img {
-  width: 40px;
-  height: 40px;
-}
+/* Gallery styles */
+@import url('css/gallery.css');
 
+/* Blog preview styles */
+@import url('css/blog.css');
 
-#contactSection {
-  background-color: #F4F4ED;
-  padding: 50px 20px;
-  text-align: center;
-}
+/* Book Reviews */
+@import url('css/reviews.css');
 
-#contactSection form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
+/* Current Favourites */
+@import url('css/favourites.css');
 
-#contactSection label {
-  margin-top: 15px;
-  margin-bottom: 5px;
-  font-weight: 600;
-}
+/* Social media */
+@import url('css/social.css');
 
-#contactSection input, 
-#contactSection textarea {
-  padding: 10px;
-  border-radius: 12px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
+/* Contact form */
+@import url('css/contact.css');
 
-#contactSection button {
-  margin-top: 20px;
-  padding: 12px;
-  border-radius: 12px;
-  border: none;
-  background-color: #A3B18A;
-  color: #F4F4ED;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#contactSection button:hover {
-  background-color: #2F4F4F;
-  color: #F4F4ED;
-}
-
-#formStatus {
-  margin-top: 15px;
-  font-weight: bold;
-}
+/* Footer */
+@import url('css/footer.css');
