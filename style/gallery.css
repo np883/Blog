@@ -1,21 +1,23 @@
-/* ========== Gallery Grid ========== */
+/* =======================
+   GALLERY PAGE STYLES
+   ======================= */
 
-.gallery {
+.gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 15px;
-  justify-items: center;
+  margin-top: 30px;
 }
 
-.gallery img {
+.gallery-grid img {
   width: 100%;
-  max-width: 250px;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-.gallery img:hover {
+.gallery-grid img:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
-
