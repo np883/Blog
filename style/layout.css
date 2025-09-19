@@ -20,28 +20,48 @@ section#contact,
   gap: 25px;
 }
 
-/* ------------------- Banner Navigation ------------------- */
+/* ------------------- Fixed Top Banner ------------------- */
+#topBanner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #2F4F4F; /* Dark forest green */
+  z-index: 9999; /* Stays on top of all content */
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Banner nav */
 .banner-nav {
-  margin-top: 25px;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .banner-nav a {
-  background-color: #E6F0D4;
-  color: #2F4F4F;
-  padding: 10px 20px;
-  border-radius: 15px;
-  font-weight: 600;
+  color: #FFFFFF; /* White text */
   text-decoration: none;
+  padding: 5px 10px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .banner-nav a:hover {
-  background-color: #A3B18A;
-  color: #F4F4ED;
-  transform: translateY(-2px);
+  background-color: #A3B18A; /* Sage accent hover */
+  color: #2F4F4F; /* Dark text on hover */
+  border-radius: 8px;
+}
+
+.divider {
+  color: #FFFFFF;
+  font-weight: normal;
+  margin: 0 5px;
+}
+
+/* Add top padding to body to avoid content being hidden behind banner */
+body {
+  padding-top: 60px; /* Adjust based on banner height */
 }
