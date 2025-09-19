@@ -1,15 +1,17 @@
-/* ------------------- Layout ------------------- */
+/* ------------------- layout.css ------------------- */
+/* Layout for sections and grids */
+
 section {
-  padding: 40px 20px;
+  padding: 40px 20px; /* Vertical and horizontal padding */
 }
 
-/* Max width for content */
 section#tiles,
 section#blogHome,
 section#featuredBlog,
-section#contact {
+section#contact,
+.single-post {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 0 auto; /* Center content */
 }
 
 /* General grid container class */
