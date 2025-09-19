@@ -1,31 +1,31 @@
-/* Main stylesheet - imports modular styles for better organization */
+/* Main stylesheet - imports modular styles for organization */
 
-/* Global + typography */
-@import url('css/base.css');
+/* Global base styles */
+@import url('base.css');
 
-/* Top banner navigation */
-@import url('css/banner.css');
+/* Banner navigation */
+@import url('banner.css');
 
 /* Section layout */
-@import url('css/sections.css');
+@import url('sections.css');
 
-/* Gallery styles */
-@import url('css/gallery.css');
+/* Gallery */
+@import url('gallery.css');
 
-/* Blog preview styles */
-@import url('css/blog.css');
+/* Blog */
+@import url('blog.css');
 
-/* Book Reviews */
-@import url('css/reviews.css');
+/* Reviews (book reviews, stars, filters) */
+@import url('reviews.css');
 
 /* Current Favourites */
-@import url('css/favourites.css');
+@import url('favourites.css');
 
-/* Social media */
-@import url('css/social.css');
+/* Contact Form */
+@import url('contact.css');
 
-/* Contact form */
-@import url('css/contact.css');
+/* Social Media icons */
+@import url('social.css');
 
 /* Footer */
-@import url('css/footer.css');
+@import url('footer.css');
