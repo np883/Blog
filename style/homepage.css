@@ -1,0 +1,165 @@
+/* =======================
+   HOMEPAGE STYLESHEET
+   Combines banner, layout, sections, social, footer
+   ======================= */
+
+/* ---------- Global layout for homepage ---------- */
+body {
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAF5; /* light neutral background */
+  color: #2F4F4F; /* dark forest text */
+  line-height: 1.6;
+}
+
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-family: 'Merriweather', serif;
+  margin-bottom: 20px;
+  color: #2F4F4F;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* ---------- Banner / Navigation ---------- */
+#topBanner {
+  background-color: #2E4E32; /* dark green strip */
+  color: white;
+  padding: 15px 0;
+  position: sticky; /* stays on top when scrolling */
+  top: 0;
+  z-index: 1000;
+}
+
+.banner-nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-size: 1.1rem;
+  flex-wrap: wrap;
+}
+
+.banner-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.banner-nav a:hover {
+  color: #A3B18A; /* sage green hover */
+}
+
+.banner-nav .divider {
+  color: rgba(255,255,255,0.5);
+}
+
+/* ---------- Section Layout ---------- */
+section:nth-of-type(even) {
+  background-color: #F4F4ED; /* alternating background */
+  border-radius: 20px;
+}
+
+/* Add subtle foliage decal background */
+section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('../images/leaf-pattern.png') repeat;
+  opacity: 0.02;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Ensure section content stays above decals */
+section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- Tiles / Cards (for About, Hobbies, etc.) ---------- */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.tile {
+  background-color: #fff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.tile h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #344E41;
+}
+
+/* ---------- Social Media Links ---------- */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 40px; height: 40px;
+  background-color: #2E4E32;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  background-color: #A3B18A;
+  transform: scale(1.1);
+}
+
+/* Example: specific TikTok color on hover */
+.social-links a.tiktok:hover {
+  background-color: #010101;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #2E4E32;
+  color: white;
+  text-align: center;
+  padding: 25px 15px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: #A3B18A;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
