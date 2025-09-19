@@ -1,9 +1,11 @@
-/* ------------------- Featured Blog Posts ------------------- */
+/* ------------------- blog.js ------------------- */
+/* Dynamically creates featured blog posts on the homepage */
 
-// Make sure posts.js is loaded first
+/* Container where featured posts will appear */
 const featuredContainer = document.getElementById("featuredPostsContainer");
 
-if(featuredContainer && typeof posts !== 'undefined') {
+/* Check if container exists and posts array is defined */
+if (featuredContainer && typeof posts !== 'undefined') {
   // Display latest 3 posts
   const featuredPosts = posts.slice(0, 3);
 
@@ -11,6 +13,7 @@ if(featuredContainer && typeof posts !== 'undefined') {
     const postDiv = document.createElement("div");
     postDiv.classList.add("featured-post-card");
 
+    // Create HTML structure for each featured post
     postDiv.innerHTML = `
       ${post.image ? `<img class="post-image" src="${post.image}" alt="${post.title}">` : ''}
       <h3><a href="blog/${post.file}">${post.title}</a></h3>
