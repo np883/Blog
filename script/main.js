@@ -1,4 +1,5 @@
-/* ------------------- Main JS ------------------- */
+/* ------------------- main.js ------------------- */
+/* Any general scripts for your website can go here */
 
-// Example: scroll to top button, theme toggles, or other general scripts
-console.log("Website scripts loaded.");
+// Example: Scroll to top button, page initialization, theme toggles
+console.log("Website scripts loaded and ready!");
