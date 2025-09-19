@@ -1,66 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>My Blog</title>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Modular CSS for blog page -->
-  <link rel="stylesheet" href="../style/base.css">
-  <link rel="stylesheet" href="../style/layout.css">
-  <link rel="stylesheet" href="../style/blog.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-  <header id="siteBanner">
-  <div class="banner-content">
-    <h1>Welcome to My Cozy Cottagecore Blog</h1>
-    <p>Navigate through the blog or go back home</p>
+  <header id="topBanner">
     <nav class="banner-nav">
-      <a href="../index.html#tiles">Home</a>
-      <a href="index.html">All Posts</a>
+      <a href="../index.html#about">Home</a> <span class="divider">|</span>
+      <a href="index.html">Blog</a>
     </nav>
-  </div>
-</header>
+  </header>
 
-  <!-- ================= Navigation ================= -->
-  <nav>
-    <a href="../index.html#tiles">Home</a> |
-    <a href="index.html">Blog</a>
-  </nav>
-
-  <!-- ================= Blog Homepage ================= -->
-  <section id="blogHome">
+  <section>
     <h1>My Blog</h1>
-    <p>Welcome! Explore my latest posts below:</p>
-
-    <!-- Container for dynamic blog posts -->
     <div id="postsContainer" class="posts-grid"></div>
   </section>
 
-  <!-- ================= Scripts ================= -->
-  <!-- Load posts.js first, then create cards dynamically -->
-  <script src="posts.js"></script>
   <script>
-    // Grab the container element
-    const container = document.getElementById("postsContainer");
-
-    // Loop through posts array and create a card for each
-    posts.forEach(post => {
-      const postDiv = document.createElement("div");
-      postDiv.classList.add("post-card");
-
-      postDiv.innerHTML = `
-        ${post.image ? `<img class="post-image" src="${post.image}" alt="${post.title}">` : ''}
-        <h3><a href="${post.file}">${post.title}</a></h3>
-        <p><em>${post.date}</em></p>
-        <p>${post.preview}</p>
-      `;
-
-      container.appendChild(postDiv);
-    });
+    fetch('blog.json')
+      .then(res => res.json())
+      .then(posts => {
+        const container = document.getElementById("postsContainer");
+        posts.forEach(post => {
+          const postDiv = document.createElement("div");
+          postDiv.classList.add("post-card");
+          postDiv.innerHTML = `
+            ${post.image ? `<img src="${post.image}" alt="${post.title}" class="post-image">` : ""}
+            <h3><a href="${post.file}">${post.title}</a></h3>
+            <p><em>${post.date}</em></p>
+            <p>${post.preview}</p>
+          `;
+          container.appendChild(postDiv);
+        });
+      });
   </script>
-
 </body>
 </html>
