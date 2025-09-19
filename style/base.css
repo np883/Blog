@@ -1,13 +1,15 @@
-/* ------------------- Base / Global Styles ------------------- */
+/* ------------------- base.css ------------------- */
+/* Global styles for body, fonts, headings, and links */
+
 body {
-  font-family: 'Libre Baskerville', Georgia, serif;
-  background-color: #F4F4ED; /* warm off-white */
-  color: #2F4F4F; /* forest green text */
+  font-family: 'Libre Baskerville', Georgia, serif; /* Whimsical serif font */
+  background-color: #F4F4ED; /* Warm off-white */
+  color: #2F4F4F; /* Forest green text color */
   margin: 0;
   line-height: 1.6;
 }
 
-/* Smooth scroll for anchor links */
+/* Smooth scrolling for anchor links */
 html {
   scroll-behavior: smooth;
 }
@@ -15,9 +17,13 @@ html {
 /* Links */
 a {
   text-decoration: none;
+  color: #2F4F4F;
+}
+a:hover {
+  color: #A3B18A; /* Sage accent on hover */
 }
 
-/* General headings */
+/* Headings */
 h1, h2, h3 {
   margin: 0 0 10px 0;
 }
