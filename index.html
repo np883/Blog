@@ -2,38 +2,28 @@
 <html>
 <head>
   <title>My First Website</title>
-
-  <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-
-  <!-- External CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation Menu -->
   <nav>
     <a href="#home">Home</a> |
     <a href="#hobbies">Hobbies</a> |
     <a href="#websites">Websites</a> |
     <a href="#gallery">Gallery</a> |
-    <a href="#contact">Contact</a>
+    <a href="#contact">Contact</a> |
+    <a href="blog/index.html">Blog</a>
   </nav>
 
-  <!-- Home Section -->
   <section id="home">
     <h1>Welcome to My Website</h1>
     <p>Hi! My name is [Your Name]. I am learning web development.</p>
-
-    <!-- Profile Image -->
     <img src="https://via.placeholder.com/200" alt="My Profile Picture" width="200">
-
-    <!-- Interactive Buttons -->
     <button onclick="alert('Hello! Thanks for visiting my website.')">Click Me!</button>
     <button onclick="toggleHobbies()">Show/Hide Hobbies</button>
   </section>
 
-  <!-- Hobbies Section -->
   <section id="hobbies">
     <h2>My Hobbies</h2>
     <ul>
@@ -43,7 +33,6 @@
     </ul>
   </section>
 
-  <!-- Websites Section -->
   <section id="websites">
     <h2>My Favorite Websites</h2>
     <ol>
@@ -53,7 +42,6 @@
     </ol>
   </section>
 
-  <!-- Gallery Section -->
   <section id="gallery">
     <h2>My Gallery</h2>
     <img id="galleryImage" src="https://via.placeholder.com/200?text=1" alt="Gallery Image">
@@ -62,7 +50,6 @@
     <button onclick="nextImage()">Next</button>
   </section>
 
-  <!-- Contact Form Section -->
   <section id="contact">
     <h2>Contact Me</h2>
     <form id="contactForm">
@@ -79,19 +66,11 @@
     </form>
   </section>
 
-<!-- Blog Section -->
   <section id="blog">
     <h2>My Blog</h2>
     <p>Check out my latest posts on my <a href="blog/index.html">Blog Homepage</a>.</p>
   </section>
 
-
-  <!-- External JavaScript -->
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
