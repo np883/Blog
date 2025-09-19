@@ -1,80 +1,110 @@
-/* Global Styles */
+/* ------------------- Global Styles ------------------- */
 body {
-  font-family: 'Roboto', Arial, sans-serif;
+  font-family: 'Libre Baskerville', Georgia, serif;
+  background-color: #F4F4ED; /* warm off-white */
+  color: #2F4F4F; /* forest green text */
   margin: 0;
-  background-color: #f4f4f9;
-  color: #333;
+  line-height: 1.6;
 }
 
-/* Navigation Bar */
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ------------------- Navigation ------------------- */
 nav {
-  background-color: #1e3a8a;
+  background-color: #A3B18A; /* muted moss green */
   padding: 15px 0;
   text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-bottom: 2px solid #2F4F4F;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 20px;
+  color: #F4F4ED;
+  margin: 0 18px;
   font-weight: 600;
   font-size: 16px;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 nav a:hover {
-  color: #ffdd57;
+  color: #FFE0AC; /* warm beige highlight */
 }
 
-/* Sections */
+/* ------------------- Section Styling ------------------- */
 section {
+  background-color: #E6F0D4; /* soft sage */
   padding: 60px 20px;
-  margin: 20px auto;
+  margin: 30px auto;
   max-width: 900px;
-  border-radius: 15px;
-  background-color: white;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
   transition: transform 0.3s ease;
 }
 section:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
-/* Headings */
+/* Subtle foliage decal behind sections */
+section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('https://i.ibb.co/Qv8YcWk/leaf-pattern.png') no-repeat top left;
+  opacity: 0.05;
+  pointer-events: none;
+  border-radius: 20px;
+}
+
+/* ------------------- Headings ------------------- */
 h1 {
-  color: #1e3a8a;
+  color: #2F4F4F;
   font-size: 2.5rem;
   margin-bottom: 15px;
 }
 h2 {
-  color: #1e40af;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
+  color: #2F4F4F;
+  font-size: 2rem;
+  margin-bottom: 12px;
 }
 p, li, label {
   font-size: 1rem;
-  line-height: 1.6;
 }
 
-/* Buttons */
+/* ------------------- Buttons ------------------- */
 button {
-  background-color: #1e3a8a;
-  color: white;
+  background-color: #A3B18A;
+  color: #F4F4ED;
   padding: 12px 25px;
   border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  border-radius: 12px;
   font-weight: 600;
+  cursor: pointer;
   transition: all 0.3s ease;
   margin-top: 10px;
 }
 button:hover {
-  background-color: #3b82f6;
+  background-color: #2F4F4F;
+  color: #FFE0AC;
   transform: translateY(-2px);
 }
 
-/* Forms */
+/* ------------------- Links ------------------- */
+a {
+  color: #2F4F4F;
+  text-decoration: none;
+}
+a:hover {
+  color: #A3B18A;
+}
+
+/* ------------------- Forms ------------------- */
 form {
   display: flex;
   flex-direction: column;
@@ -84,7 +114,7 @@ input, textarea {
   padding: 12px;
   margin-bottom: 15px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid #C9E4C5;
   font-size: 1rem;
   width: 100%;
 }
@@ -92,44 +122,18 @@ textarea {
   resize: vertical;
 }
 
-/* Gallery */
+/* ------------------- Gallery ------------------- */
 #gallery img {
   max-width: 100%;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 #gallery img:hover {
   transform: scale(1.05);
 }
 
-/* Section Background Colors */
-#home { background-color: #dbeafe; }
-#hobbies { background-color: #d1fae5; }
-#websites { background-color: #ffe4e6; }
-#gallery { background-color: #fed7aa; }
-#contact { background-color: #e0f2fe; }
-
-/* Blog Section */
-#blog .post {
-  margin-bottom: 20px;
-  padding: 15px;
-  border-left: 5px solid #1e3a8a;
-  background: #f9fafb;
-  border-radius: 8px;
-}
-#blog .post h3 {
-  margin: 0;
-}
-#blog .post a {
-  text-decoration: none;
-  color: #1e3a8a;
-}
-#blog .post a:hover {
-  color: #3b82f6;
-}
-
-/* Blog Homepage Cards */
+/* ------------------- Blog Homepage Cards ------------------- */
 #postsContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -138,36 +142,46 @@ textarea {
 }
 
 #postsContainer .post {
-  background-color: white;
-  padding: 20px;
-  border-radius: 12px;
-  border-left: 5px solid #1e3a8a;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-left: 5px solid #2F4F4F;
+  background-color: #F4F4ED;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #postsContainer .post:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 #postsContainer .post h3 a {
-  color: #1e3a8a;
+  color: #2F4F4F;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 700;
 }
-
 #postsContainer .post h3 a:hover {
-  color: #3b82f6;
+  color: #A3B18A;
 }
-
 #postsContainer .post p {
   margin: 10px 0;
   line-height: 1.5;
 }
+.post-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
 
-/* Optional post image */
+/* ------------------- Section Background Variations ------------------- */
+#home { background-color: #DDE7DC; }
+#hobbies { background-color: #E6F0D4; }
+#websites { background-color: #F0EDE8; }
+#gallery { background-color: #D9E5D0; }
+#contact { background-color: #EDF4E1; }
+#blog { background-color: #F4F4ED; }
+
 .post-image {
   width: 100%;
   border-radius: 8px;
