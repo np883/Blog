@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Current Favourites</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Banner Navigation -->
+  <header id="topBanner">
+    <nav class="banner-nav">
+      <a href="../index.html#about">Home</a> <span class="divider">|</span>
+      <a href="index.html">Favourites</a>
+    </nav>
+  </header>
+
+  <!-- Current Favourites Section -->
+  <section>
+    <h1>Current Favourites</h1>
+    <p>Here are the things I’m loving this month!</p>
+
+    <div id="currentFavourites" class="favourites-grid"></div>
+  </section>
+
+  <!-- Archive Section -->
+  <section>
+    <h2>Past Monthly Favourites</h2>
+    <p>Take a look at my favourites from previous months.</p>
+
+    <div id="favouritesArchive" class="favourites-grid"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Cozy Site | <a href="#">Privacy Policy</a></p>
+  </footer>
+
+  <!-- JS for dynamically adding favourites -->
+  <script src="favourites.js"></script>
+  <script>
+    const currentContainer = document.getElementById("currentFavourites");
+    const archiveContainer = document.getElementById("favouritesArchive");
+
+    currentFavourites.forEach(item => {
+      const favDiv = document.createElement("div");
+      favDiv.classList.add("favourite-card");
+
+      favDiv.innerHTML = `
+        <img src="${item.image}" alt="${item.name}">
+        <h4>${item.name}</h4>
+        <p>${item.category}</p>
+        <a href="${item.link}" target="_blank">View / Buy</a>
+      `;
+
+      currentContainer.appendChild(favDiv);
+    });
+
+    favouritesArchive.forEach(item => {
+      const favDiv = document.createElement("div");
+      favDiv.classList.add("favourite-card");
+
+      favDiv.innerHTML = `
+        <img src="${item.image}" alt="${item.name}">
+        <h4>${item.name}</h4>
+        <p>${item.category} - ${item.month}</p>
+        <a href="${item.link}" target="_blank">View / Buy</a>
+      `;
+
+      archiveContainer.appendChild(favDiv);
+    });
+  </script>
+</body>
+</html>
