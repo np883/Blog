@@ -1,4 +1,6 @@
-/* ------------------- Featured Blog Posts ------------------- */
+/* ------------------- featured.css ------------------- */
+/* Styles for featured blog posts section */
+
 #featuredBlog {
   margin: 50px auto;
   text-align: center;
@@ -19,6 +21,7 @@
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .featured-post-card::before {
   content: '';
   position: absolute;
@@ -30,6 +33,7 @@
   pointer-events: none;
   border-radius: 20px;
 }
+
 .featured-post-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.12);
@@ -44,6 +48,7 @@
 .featured-post-card h3 a:hover {
   color: #A3B18A;
 }
+
 .featured-post-card p {
   margin: 8px 0;
   line-height: 1.5;
