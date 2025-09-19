@@ -1,49 +1,46 @@
-/* =======================
-   CONTACT PAGE / SECTION STYLES
-   ======================= */
+/* ------------------- contact.css ------------------- */
 
-#contactSection {
+form {
   max-width: 600px;
   margin: 0 auto;
-  text-align: left;
-}
-
-#contactForm {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-#contactForm label {
-  font-weight: bold;
+form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
   color: #2F4F4F;
 }
 
-#contactForm input,
-#contactForm textarea {
+form input, form textarea {
   padding: 10px;
+  border-radius: 12px;
   border: 1px solid #A3B18A;
-  border-radius: 8px;
-  font-family: inherit;
   font-size: 1rem;
+  margin-top: 5px;
 }
 
-#contactForm button {
-  background-color: #2E4E32;
-  color: white;
+form button {
+  background-color: #2F4F4F;
+  color: #fff;
   border: none;
-  border-radius: 8px;
   padding: 12px;
-  font-size: 1rem;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-weight: 600;
+  transition: background 0.3s ease;
 }
 
-#contactForm button:hover {
+form button:hover {
   background-color: #A3B18A;
 }
 
 #formStatus {
+  text-align: center;
   margin-top: 10px;
-  font-weight: bold;
+  color: #2F4F4F;
+  font-weight: 600;
 }
