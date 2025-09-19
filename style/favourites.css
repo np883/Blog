@@ -1,52 +1,55 @@
-/* =======================
-   FAVOURITES PAGE STYLES
-   ======================= */
+/* ------------------- favourites.css ------------------- */
 
-/* Current favourites grid */
 .favourites-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 25px;
+  margin-top: 20px;
 }
 
 .favourite-card {
-  background-color: #FFFFFF;
-  border-radius: 18px;
+  background-color: #F4F4ED;
+  border-radius: 20px;
   padding: 15px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
 
 .favourite-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
 
 .favourite-card img {
-  max-width: 100%;
+  width: 100%;
   border-radius: 12px;
   margin-bottom: 10px;
+  object-fit: cover;
 }
 
 .favourite-card h4 {
-  margin-bottom: 5px;
-  color: #2F4F4F;
+  margin: 5px 0;
+}
+
+.favourite-card p {
+  margin: 5px 0;
 }
 
 .favourite-card a {
-  color: #A3B18A;
   text-decoration: none;
+  color: #2F4F4F;
   font-weight: 600;
 }
+
 .favourite-card a:hover {
-  text-decoration: underline;
+  color: #A3B18A;
 }
 
-/* Archive section */
-.archive {
-  margin-top: 50px;
-}
-.archive h3 {
-  margin-bottom: 15px;
+/* Filter bar */
+.filter-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
