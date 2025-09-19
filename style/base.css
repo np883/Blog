@@ -1,0 +1,23 @@
+/* ------------------- Base / Global Styles ------------------- */
+body {
+  font-family: 'Libre Baskerville', Georgia, serif;
+  background-color: #F4F4ED; /* warm off-white */
+  color: #2F4F4F; /* forest green text */
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+}
+
+/* General headings */
+h1, h2, h3 {
+  margin: 0 0 10px 0;
+}
