@@ -4,10 +4,11 @@ const reviews = [
   {
     title: "The Enchanted Forest",
     author: "L. Green",
-    rating: 4.5,           // Supports half/quarter stars
-    review: "A magical journey with whimsical characters.",
+    rating: 4.25,
+    review: "A short preview of the review...",
     image: "images/book1.jpg",
-    tags: ["fantasy", "cozy"]
+    tags: ["fantasy", "cozy"],
+    file: "reviews/enchanted-forest.html"  // Points to individual review
   },
   {
     title: "Space Love",
@@ -15,17 +16,9 @@ const reviews = [
     rating: 3.75,
     review: "Romantic space adventure with unexpected twists.",
     image: "images/book2.jpg",
-    tags: ["romance", "sci-fi"]
-  },
-  {
-    title: "Mystery of the Cottage",
-    author: "C. Willow",
-    rating: 5,
-    review: "A cozy mystery full of charm and suspense.",
-    image: "images/book3.jpg",
-    tags: ["cozy", "mystery"]
+    tags: ["romance", "sci-fi"],
+    file: "reviews/space-love.html"
   }
-  // Add more reviews as needed
 ];
 
 /* Container for reviews */
