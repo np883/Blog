@@ -1,0 +1,87 @@
+/* ------------------- Book Reviews Section ------------------- */
+#bookReviews {
+  padding: 50px 20px;
+  background-color: #F4F4ED;
+}
+
+#bookReviews h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.filter-buttons button {
+  background-color: #E6F0D4;
+  color: #2F4F4F;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.filter-buttons button:hover,
+.filter-buttons button.active {
+  background-color: #2F4F4F;
+  color: #F4F4ED;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.review-card {
+  background-color: #E6F0D4;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+  position: relative;
+}
+
+.review-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.review-card h3 {
+  margin-bottom: 5px;
+}
+
+.review-card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+/* Star ratings */
+.star-rating {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #FFD700; /* Gold stars */
+}
+.star-rating i {
+  margin-right: 2px;
+}
+
+/* Optional: smaller text for tags */
+.review-tags {
+  margin-top: 10px;
+}
+.review-tags span {
+  background-color: #A3B18A;
+  color: #F4F4ED;
+  padding: 3px 8px;
+  border-radius: 8px;
+  margin-right: 5px;
+  font-size: 0.8rem;
+}
