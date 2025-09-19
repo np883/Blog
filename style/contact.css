@@ -1,0 +1,35 @@
+/* ------------------- Contact Form ------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto 50px;
+}
+
+input, textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #C9E4C5;
+  font-size: 1rem;
+  width: 100%;
+}
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #A3B18A;
+  color: #F4F4ED;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+button:hover {
+  background-color: #2F4F4F;
+  color: #FFE0AC;
+  transform: translateY(-2px);
+}
