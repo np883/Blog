@@ -26,11 +26,13 @@
       const postDiv = document.createElement("div");
       postDiv.classList.add("post");
 
-      postDiv.innerHTML = `
-        <h3><a href="${post.file}">${post.title}</a></h3>
-        <p><em>${post.date}</em></p>
-        <p>${post.preview}</p>
-      `;
+     postDiv.innerHTML = `
+      ${post.img ? `<img src="${post.img}" alt="${post.title}" class="post-image">` : ''}
+      <h3><a href="${post.file}">${post.title}</a></h3>
+      <p><em>${post.date}</em></p>
+      <p>${post.preview}</p>
+    `;
+
 
       container.appendChild(postDiv);
     });
