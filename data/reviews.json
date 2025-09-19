@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Whispering Woods",
+    "link": "https://amazon.com/example",
+    "date": "2025-09-19",
+    "rating": 4.5,
+    "recommended": true,
+    "preview": "A magical forest adventure.",
+    "tags": ["Fantasy","Adventure"]
+  },
+  {
+    "title": "Cozy Cottage Life",
+    "link": "https://amazon.com/example2",
+    "date": "2025-08-10",
+    "rating": 5,
+    "recommended": true,
+    "preview": "Heartwarming cottage stories.",
+    "tags": ["Romance","SliceOfLife"]
+  }
+]
