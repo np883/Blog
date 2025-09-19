@@ -1,0 +1,19 @@
+[
+  {
+    "title": "My First Blog Post",
+    "file": "post1.html",
+    "date": "2025-09-19",
+    "preview": "This is a short preview of my first blog post.",
+    "image": "../images/blog1.jpg",
+    "tags": ["Introduction","Personal"]
+  },
+  {
+    "title": "Learning Web Development",
+    "file": "post2.html",
+    "date": "2025-09-15",
+    "preview": "Today I learned how to structure a website using HTML, CSS, and JS.",
+    "image": "../images/blog2.jpg",
+    "tags": ["Tutorial","WebDev"]
+  }
+]
+
