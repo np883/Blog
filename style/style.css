@@ -1,22 +1,25 @@
-/* Master stylesheet - imports modular styles */
+/* =======================
+   STYLE.CSS (Master File)
+   Imports all modular styles
+   ======================= */
 
-/* Base styles (colors, fonts, reset, utilities) */
+/* 1. Base styles (reset, variables, typography, utilities) */
 @import url('base.css');
 
-/* Homepage (banner, sections, social, footer) */
+/* 2. Homepage (banner, sections, footer, social links) */
 @import url('homepage.css');
 
-/* Blog page */
+/* 3. Blog page (blog homepage + single post) */
 @import url('blog.css');
 
-/* Reviews page */
+/* 4. Reviews page (book reviews, stars, filters) */
 @import url('reviews.css');
 
-/* Favourites page */
+/* 5. Favourites page (current + archive) */
 @import url('favourites.css');
 
-/* Gallery page */
+/* 6. Gallery page (images grid, lightbox) */
 @import url('gallery.css');
 
-/* Contact section/page */
+/* 7. Contact (form + social icons) */
 @import url('contact.css');
