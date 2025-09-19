@@ -1,6 +1,6 @@
 /* =======================
-   POSTS.JS - Blog Posts (Merged)
-   Dynamically renders featured posts on homepage AND all posts on blog page
+   POSTS.JS - Blog Posts (JSON + Markdown)
+   Dynamically renders featured posts on homepage AND full blog posts
    ======================= */
 
 fetch('blog.json')
@@ -16,7 +16,7 @@ fetch('blog.json')
         postDiv.classList.add("featured-post-card");
         postDiv.innerHTML = `
           ${post.image ? `<img class="post-image" src="${post.image}" alt="${post.title}">` : ''}
-          <h3><a href="blog/${post.file}">${post.title}</a></h3>
+          <h3><a href="blog/post.html?file=${post.file}">${post.title}</a></h3>
           <p><em>${post.date}</em></p>
           <p>${post.preview}</p>
         `;
@@ -32,7 +32,7 @@ fetch('blog.json')
         postDiv.classList.add("post-card");
         postDiv.innerHTML = `
           ${post.image ? `<img src="${post.image}" alt="${post.title}" class="post-image">` : ""}
-          <h3><a href="${post.file}">${post.title}</a></h3>
+          <h3><a href="post.html?file=${post.file}">${post.title}</a></h3>
           <p><em>${post.date}</em></p>
           <p>${post.preview}</p>
         `;
