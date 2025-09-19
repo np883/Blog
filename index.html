@@ -2,156 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Cozy Cottagecore Site</title>
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="style.css">
-  <!-- Reviews CSS -->
-  <link rel="stylesheet" href="style/reviews.css">
-  <!-- Favourites CSS -->
-  <link rel="stylesheet" href="style/favourites.css">
-  <!-- Font Awesome for stars -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>My Cozy Homepage</title>
+  <link rel="stylesheet" href="css/style.css"> <!-- master CSS -->
 </head>
 <body>
 
-  <!-- ================= Top Banner Navigation ================= -->
+  <!-- Banner Navigation -->
   <header id="topBanner">
     <nav class="banner-nav">
-      <a href="#aboutSection">About Me</a>
-      <span class="divider">|</span>
-      <a href="#hobbiesSection">Hobbies</a>
-      <span class="divider">|</span>
-      <a href="#gallerySection">Gallery</a>
-      <span class="divider">|</span>
-      <a href="#blogSection">Blog</a>
-      <span class="divider">|</span>
-      <a href="#bookReviews">Reviews</a>
-      <span class="divider">|</span>
-      <a href="#currentFavourites">Favourites</a>
-      <span class="divider">|</span>
-      <a href="#contactSection">Contact</a>
+      <a href="#about">About Me</a> <span class="divider">|</span>
+      <a href="#hobbies">Hobbies</a> <span class="divider">|</span>
+      <a href="#gallery">Gallery</a> <span class="divider">|</span>
+      <a href="blog/index.html">Blog</a> <span class="divider">|</span>
+      <a href="reviews/index.html">Reviews</a> <span class="divider">|</span>
+      <a href="favourites/index.html">Favourites</a> <span class="divider">|</span>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- ================= About Me Section ================= -->
-  <section id="aboutSection">
+  <!-- About Me Section -->
+  <section id="about">
     <h2>About Me</h2>
-    <p>Welcome to my cozy corner of the web! I love books, stationery, and whimsical adventures.</p>
+    <p>Welcome to my cozy corner of the internet! I love reading, crafts, and whimsical adventures.</p>
   </section>
 
-  <!-- ================= Hobbies Section ================= -->
-  <section id="hobbiesSection">
+  <!-- Hobbies Section -->
+  <section id="hobbies">
     <h2>Hobbies</h2>
-    <ul>
-      <li>Reading fantasy novels</li>
-      <li>Sketching and journaling</li>
-      <li>Visiting cozy cafes</li>
-    </ul>
-  </section>
-
-  <!-- ================= Gallery Section ================= -->
-  <section id="gallerySection">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <img src="images/gallery1.jpg" alt="Gallery Image 1">
-      <img src="images/gallery2.jpg" alt="Gallery Image 2">
-      <img src="images/gallery3.jpg" alt="Gallery Image 3">
+    <div class="tile-grid">
+      <div class="tile"><h3>Reading</h3><p>Diving into magical worlds every day.</p></div>
+      <div class="tile"><h3>Crafting</h3><p>Creating cozy handmade decorations.</p></div>
     </div>
   </section>
 
-  <!-- ================= Blog Section ================= -->
-  <section id="blogSection">
-    <h2>Blog</h2>
-    <p>Check out my latest posts on my <a href="blog/index.html">Blog Homepage</a>.</p>
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Gallery Preview</h2>
+    <div class="tile-grid">
+      <div class="tile"><img src="images/gallery1.jpg" alt="Gallery Image 1"></div>
+      <div class="tile"><img src="images/gallery2.jpg" alt="Gallery Image 2"></div>
+    </div>
   </section>
 
-  <!-- ================= Book Reviews Section ================= -->
-  <section id="bookReviews">
+  <!-- Blog Section -->
+  <section id="blog">
+    <h2>My Blog</h2>
+    <div class="tile-grid">
+      <div class="tile"><h3><a href="blog/index.html">Go to Blog</a></h3></div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews">
     <h2>Book Reviews</h2>
-    <p>Explore my latest reads! Check out all reviews <a href="reviews/index.html">here</a>, or browse some featured books below:</p>
-
-    <!-- Reviews Container -->
-    <div id="reviewsContainer" class="reviews-grid"></div>
-
-    <!-- Filter Buttons -->
-    <div id="reviewFilters" class="filter-buttons">
-      <button data-filter="all" class="active">All</button>
-      <button data-filter="fantasy">Fantasy</button>
-      <button data-filter="romance">Romance</button>
-      <button data-filter="sci-fi">Sci-Fi</button>
-      <button data-filter="mystery">Mystery</button>
-      <button data-filter="cozy">Cozy</button>
-    </div>
-
-    <!-- Sorting & Recommendation Controls -->
-    <div id="reviewControls" class="review-controls">
-      <label for="sortSelect">Sort by:</label>
-      <select id="sortSelect">
-        <option value="dateDesc">Date: Newest → Oldest</option>
-        <option value="dateAsc">Date: Oldest → Newest</option>
-        <option value="ratingDesc">Rating: High → Low</option>
-        <option value="ratingAsc">Rating: Low → High</option>
-      </select>
-
-      <label><input type="checkbox" id="recommendFilter"> Show only recommended</label>
+    <div class="tile-grid">
+      <div class="tile"><h3><a href="reviews/index.html">Go to Reviews</a></h3></div>
     </div>
   </section>
 
-  <!-- ================= Current Favourites Section ================= -->
-  <section id="currentFavourites">
+  <!-- Favourites Section -->
+  <section id="favourites">
     <h2>Current Favourites</h2>
-    <p>Here are some things I am loving right now! Click any item to check it out:</p>
-
-    <!-- Current Month Favourites -->
-    <div id="currentFavouritesContainer" class="favourites-grid"></div>
-
-    <!-- Archive Navigation -->
-    <h3>Past Monthly Favourites</h3>
-    <div id="favouritesArchive" class="archive-buttons"></div>
-
-    <!-- Archive Container -->
-    <div id="archiveFavouritesContainer" class="favourites-grid"></div>
-  </section>
-
-  <!-- ================= Social Media Links ================= -->
-  <section id="socialLinks">
-    <h2>Follow Me</h2>
-    <div class="social-icons">
-      <a href="https://www.tiktok.com/@yourhandle" target="_blank"><img src="images/tiktok.png" alt="TikTok"></a>
-      <a href="https://www.instagram.com/yourhandle" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-      <a href="https://twitter.com/yourhandle" target="_blank"><img src="images/twitter.png" alt="Twitter"></a>
+    <div class="tile-grid">
+      <div class="tile"><h3><a href="favourites/index.html">Go to Favourites</a></h3></div>
     </div>
   </section>
 
-  <!-- ================= Contact Me Section ================= -->
-  <section id="contactSection">
+  <!-- Social Media Links -->
+  <section id="social">
+    <h2>Follow Me</h2>
+    <div class="social-links">
+      <a href="#" class="tiktok">T</a>
+      <a href="#" class="instagram">I</a>
+      <a href="#" class="twitter">T</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
     <h2>Contact Me</h2>
     <form id="contactForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="user_name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="user_email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Send Message</button>
+      <label>Name:<input type="text" id="name" required></label>
+      <label>Email:<input type="email" id="email" required></label>
+      <label>Message:<textarea id="message" rows="5" required></textarea></label>
+      <button type="submit">Send</button>
+      <div id="formStatus"></div>
     </form>
-    <p id="formStatus"></p>
   </section>
 
-  <!-- ================= Footer ================= -->
   <footer>
-    <p>© 2025 Neve's Nook</p>
+    <p>&copy; 2025 My Cozy Site | <a href="#">Privacy Policy</a></p>
   </footer>
 
-  <!-- ================= Scripts ================= -->
-  <!-- Reviews JS -->
-  <script src="script/reviews.js"></script>
-  <!-- Favourites JS -->
-  <script src="script/favourites.js"></script>
-  <!-- Contact Me JS -->
-  <script src="script/contactme.js"></script>
+  <!-- Scripts -->
+  <script src="contactme.js"></script>
 </body>
 </html>
