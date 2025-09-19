@@ -1,29 +1,23 @@
-/* ------------------- base.css ------------------- */
-/* Global styles for body, fonts, headings, and links */
-
+/* ========== Base Styles (global resets, fonts, colors) ========== */
 body {
-  font-family: 'Libre Baskerville', Georgia, serif; /* Whimsical serif font */
-  background-color: #F4F4ED; /* Warm off-white */
-  color: #2F4F4F; /* Forest green text color */
+  font-family: 'Georgia', serif;
   margin: 0;
+  padding: 0;
+  background-color: #F4F4ED; /* Cozy off-white */
+  color: #2F4F4F; /* Muted dark gray */
   line-height: 1.6;
 }
 
-/* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
+h1, h2, h3, h4 {
+  font-family: 'Palatino Linotype', serif;
+  color: #355E3B; /* Forest green */
 }
 
-/* Links */
 a {
+  color: #355E3B;
   text-decoration: none;
-  color: #2F4F4F;
-}
-a:hover {
-  color: #A3B18A; /* Sage accent on hover */
 }
 
-/* Headings */
-h1, h2, h3 {
-  margin: 0 0 10px 0;
+a:hover {
+  color: #A3B18A; /* Sage green hover */
 }
