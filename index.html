@@ -117,25 +117,41 @@
     <div id="featuredPostsContainer" class="featured-posts-grid"></div>
   </section>
 
-  <!-- ================= Book Reviews Section ================= -->
+<!-- ================= Book Reviews Section ================= -->
 <section id="bookReviews">
   <h2>Book Reviews</h2>
   <p>Explore my latest reads! Filter by genre or trope using the buttons below:</p>
 
   <!-- Filter Buttons -->
   <div id="reviewFilters" class="filter-buttons">
-    <button data-filter="all">All</button>
+    <button data-filter="all" class="active">All</button>
     <button data-filter="fantasy">Fantasy</button>
     <button data-filter="romance">Romance</button>
     <button data-filter="sci-fi">Sci-Fi</button>
     <button data-filter="mystery">Mystery</button>
     <button data-filter="cozy">Cozy</button>
-    <!-- Add more tags as needed -->
+  </div>
+
+  <!-- Sorting & Recommendation Controls -->
+  <div id="reviewControls" class="review-controls">
+    <label for="sortSelect">Sort by:</label>
+    <select id="sortSelect">
+      <option value="dateDesc">Date: Newest → Oldest</option>
+      <option value="dateAsc">Date: Oldest → Newest</option>
+      <option value="ratingDesc">Rating: High → Low</option>
+      <option value="ratingAsc">Rating: Low → High</option>
+    </select>
+
+    <label><input type="checkbox" id="recommendFilter"> Show only recommended</label>
   </div>
 
   <!-- Reviews Container -->
   <div id="reviewsContainer" class="reviews-grid"></div>
 </section>
+
+<!-- Link reviews.js at the end of body -->
+<script src="script/reviews.js"></script>
+
 
   
   <!-- ================= Contact Section ================= -->
@@ -165,6 +181,7 @@
 
 </body>
 </html>
+
 
 
 
