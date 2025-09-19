@@ -1,74 +1,53 @@
-/* ------------------- favourites.js ------------------- */
+/* =======================
+   FAVOURITES.JS
+   Dynamic content for current and past favourites
+   ======================= */
 
-/* Example favourites data */
-const favourites = [
+/* ---------- Current Favourites ---------- */
+const currentFavourites = [
   {
-    month: "September 2025",
-    items: [
-      {
-        name: "The Enchanted Forest",
-        category: "Book",
-        image: "images/book1.jpg",
-        link: "https://www.amazon.com/dp/example1?tag=youraffiliateid"
-      },
-      {
-        name: "Forest Green Notebook",
-        category: "Stationery",
-        image: "images/notebook1.jpg",
-        link: "https://www.amazon.com/dp/example2?tag=youraffiliateid"
-      }
-    ]
+    name: "Cozy Reading Blanket",
+    category: "Books & Comfort",
+    image: "../images/favourites/blanket.jpg",
+    link: "https://www.amazon.com/example-blanket"
   },
   {
-    month: "August 2025",
-    items: [
-      {
-        name: "Mystery of the Cottage",
-        category: "Book",
-        image: "images/book2.jpg",
-        link: "https://www.amazon.com/dp/example3?tag=youraffiliateid"
-      },
-      {
-        name: "Sage Green Pen Set",
-        category: "Stationery",
-        image: "images/pen1.jpg",
-        link: "https://www.amazon.com/dp/example4?tag=youraffiliateid"
-      }
-    ]
+    name: "Scented Candle - Forest Pine",
+    category: "Home & Decor",
+    image: "../images/favourites/candle.jpg",
+    link: "https://www.amazon.com/example-candle"
+  },
+  {
+    name: "Watercolor Journal",
+    category: "Stationery",
+    image: "../images/favourites/journal.jpg",
+    link: "https://www.amazon.com/example-journal"
   }
 ];
 
-/* Containers */
-const currentContainer = document.getElementById('currentFavouritesContainer');
-const archiveContainer = document.getElementById('archiveFavouritesContainer');
-const archiveButtonsContainer = document.getElementById('favouritesArchive');
+/* ---------- Past / Archived Favourites ---------- */
+const favouritesArchive = [
+  {
+    name: "Vintage Tea Set",
+    category: "Home & Decor",
+    month: "August 2025",
+    image: "../images/favourites/teaset.jpg",
+    link: "https://www.amazon.com/example-teaset"
+  },
+  {
+    name: "Fantasy Novel: 'Whispering Woods'",
+    category: "Books",
+    month: "July 2025",
+    image: "../images/favourites/fantasybook.jpg",
+    link: "https://www.amazon.com/example-book"
+  },
+  {
+    name: "Handmade Notebook",
+    category: "Stationery",
+    month: "June 2025",
+    image: "../images/favourites/notebook.jpg",
+    link: "https://www.amazon.com/example-notebook"
+  }
+];
 
-/* Render favourites cards */
-function renderFavourites(items, container) {
-  container.innerHTML = '';
-  items.forEach(item => {
-    const card = document.createElement('div');
-    card.classList.add('favourite-card');
-    card.innerHTML = `
-      <a href="${item.link}" target="_blank">
-        <img src="${item.image}" alt="${item.name}">
-        <h4>${item.name}</h4>
-        <p class="category">${item.category}</p>
-      </a>
-    `;
-    container.appendChild(card);
-  });
-}
-
-/* Render current month favourites */
-renderFavourites(favourites[0].items, currentContainer);
-
-/* Generate archive buttons */
-favourites.slice(1).forEach((monthData, index) => {
-  const button = document.createElement('button');
-  button.textContent = monthData.month;
-  button.addEventListener('click', () => {
-    renderFavourites(monthData.items, archiveContainer);
-  });
-  archiveButtonsContainer.appendChild(button);
-});
+/* ---------- You can add more favourites by following the same object structure ---------- */
