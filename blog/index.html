@@ -1,161 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Cozy Cottagecore Website</title>
+  <title>My Blog</title>
   <!-- Google Fonts for whimsical serif style -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
   <!-- ================= Navigation ================= -->
   <nav>
-    <a href="#tiles">Home</a>
-    <a href="#contact">Contact</a>
-    <a href="blog/index.html">Blog</a>
+    <a href="../index.html#tiles">Home</a> |
+    <a href="index.html">Blog</a>
   </nav>
 
-  <!-- ================= Tile Grid ================= -->
-  <section id="tiles">
-    <!-- About Me Tile -->
-    <div class="tile" onclick="openModal('aboutModal')">
-      <h2>About Me</h2>
-      <p>Click to learn more about me!</p>
-    </div>
+  <!-- ================= Blog Homepage ================= -->
+  <section id="blogHome">
+    <h1>My Blog</h1>
+    <p>Welcome! Explore my latest posts below:</p>
 
-    <!-- Hobbies Tile -->
-    <div class="tile" onclick="openModal('hobbiesModal')">
-      <h2>Hobbies</h2>
-      <p>Click to explore my favorite pastimes!</p>
-    </div>
-
-    <!-- Gallery Tile -->
-    <div class="tile" onclick="openModal('galleryModal')">
-      <h2>Gallery</h2>
-      <p>Click to view my cozy snapshots!</p>
-    </div>
-
-    <!-- Blog Tile -->
-    <div class="tile" onclick="openModal('blogModal')">
-      <h2>Blog</h2>
-      <p>Click to read my latest posts!</p>
-    </div>
-  </section>
-
-  <!-- ================= Modals ================= -->
-
-  <!-- About Me Modal -->
-  <div id="aboutModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('aboutModal')">&times;</span>
-      <h2>About Me</h2>
-      <p>Hi! I'm [Your Name], a cozy web developer exploring whimsical and cottagecore designs.</p>
-      <img src="https://via.placeholder.com/200" alt="Profile Picture">
-    </div>
-  </div>
-
-  <!-- Hobbies Modal -->
-  <div id="hobbiesModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('hobbiesModal')">&times;</span>
-      <h2>My Hobbies</h2>
-      <div class="hobby-cards">
-        <div class="hobby-card">Reading</div>
-        <div class="hobby-card">Coding</div>
-        <div class="hobby-card">Gaming</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Gallery Modal -->
-  <div id="galleryModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('galleryModal')">&times;</span>
-      <h2>Gallery</h2>
-      <img id="galleryImage" src="https://via.placeholder.com/300x200?text=1" alt="Gallery Image">
-      <div class="gallery-buttons">
-        <button onclick="previousImage()">Previous</button>
-        <button onclick="nextImage()">Next</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Blog Modal -->
-  <div id="blogModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('blogModal')">&times;</span>
-      <h2>Blog</h2>
-      <p>Check out my latest posts on my <a href="blog/index.html">Blog Homepage</a>.</p>
-    </div>
-  </div>
-
-  <!-- ================= Featured Blog Posts ================= -->
-  <section id="featuredBlog">
-    <h2>Latest Blog Posts</h2>
-    <p>Check out my latest thoughts and web projects:</p>
-    <div id="featuredPostsContainer" class="featured-posts-grid"></div>
-  </section>
-
-  <!-- ================= Contact Section ================= -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
+    <!-- Container for dynamic blog posts -->
+    <div id="postsContainer" class="posts-grid"></div>
   </section>
 
   <!-- ================= Scripts ================= -->
-  <script src="script.js"></script>
-
-  <!-- Featured Blog Posts Script -->
-  <script src="blog/posts.js"></script>
+  <script src="posts.js"></script>
   <script>
-    // Open a modal
-    function openModal(modalId) {
-      document.getElementById(modalId).style.display = 'block';
-    }
+    const container = document.getElementById("postsContainer");
 
-    // Close a modal
-    function closeModal(modalId) {
-      document.getElementById(modalId).style.display = 'none';
-    }
-
-    // Close modal when clicking outside content
-    window.onclick = function(event) {
-      const modals = document.querySelectorAll('.modal');
-      modals.forEach(modal => {
-        if (event.target === modal) {
-          modal.style.display = 'none';
-        }
-      });
-    }
-
-    // Featured Blog Posts: Show latest 3 posts
-    const featuredContainer = document.getElementById("featuredPostsContainer");
-    const featuredPosts = posts.slice(0, 3); // latest 3 posts
-
-    featuredPosts.forEach(post => {
+    // Loop through posts array and create a card for each
+    posts.forEach(post => {
       const postDiv = document.createElement("div");
-      postDiv.classList.add("featured-post-card");
+      postDiv.classList.add("post-card");
 
       postDiv.innerHTML = `
         ${post.image ? `<img class="post-image" src="${post.image}" alt="${post.title}">` : ''}
-        <h3><a href="blog/${post.file}">${post.title}</a></h3>
+        <h3><a href="${post.file}">${post.title}</a></h3>
         <p><em>${post.date}</em></p>
         <p>${post.preview}</p>
       `;
 
-      featuredContainer.appendChild(postDiv);
+      container.appendChild(postDiv);
     });
   </script>
 </body>
 </html>
+
