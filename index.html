@@ -1,55 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My First Website</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <title>My Cozy Cottagecore Website</title>
+  <!-- Google Fonts for whimsical serif style -->
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- ================= Navigation ================= -->
   <nav>
-    <a href="#home">Home</a> |
-    <a href="#hobbies">Hobbies</a> |
-    <a href="#websites">Websites</a> |
-    <a href="#gallery">Gallery</a> |
-    <a href="#contact">Contact</a> |
+    <a href="#tiles">Home</a>
+    <a href="#contact">Contact</a>
     <a href="blog/index.html">Blog</a>
   </nav>
 
-  <section id="home">
-    <h1>Welcome to My Website</h1>
-    <p>Hi! My name is [Your Name]. I am learning web development.</p>
-    <img src="https://via.placeholder.com/200" alt="My Profile Picture" width="200">
-    <button onclick="alert('Hello! Thanks for visiting my website.')">Click Me!</button>
-    <button onclick="toggleHobbies()">Show/Hide Hobbies</button>
+  <!-- ================= Tile Grid ================= -->
+  <section id="tiles">
+    <!-- About Me Tile -->
+    <div class="tile" onclick="openModal('aboutModal')">
+      <h2>About Me</h2>
+      <p>Click to learn more about me!</p>
+    </div>
+
+    <!-- Hobbies Tile -->
+    <div class="tile" onclick="openModal('hobbiesModal')">
+      <h2>Hobbies</h2>
+      <p>Click to explore my favorite pastimes!</p>
+    </div>
+
+    <!-- Gallery Tile -->
+    <div class="tile" onclick="openModal('galleryModal')">
+      <h2>Gallery</h2>
+      <p>Click to view my cozy snapshots!</p>
+    </div>
+
+    <!-- Blog Tile -->
+    <div class="tile" onclick="openModal('blogModal')">
+      <h2>Blog</h2>
+      <p>Click to read my latest posts!</p>
+    </div>
   </section>
 
-  <section id="hobbies">
-    <h2>My Hobbies</h2>
-    <ul>
-      <li>Reading</li>
-      <li>Gaming</li>
-      <li>Coding</li>
-    </ul>
-  </section>
+  <!-- ================= Modals ================= -->
 
-  <section id="websites">
-    <h2>My Favorite Websites</h2>
-    <ol>
-      <li><a href="https://www.google.com" target="_blank">Google</a></li>
-      <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
-      <li><a href="https://www.wikipedia.org" target="_blank">Wikipedia</a></li>
-    </ol>
-  </section>
+  <!-- About Me Modal -->
+  <div id="aboutModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('aboutModal')">&times;</span>
+      <h2>About Me</h2>
+      <p>Hi! I'm [Your Name], a cozy web developer exploring whimsical and cottagecore designs.</p>
+      <img src="https://via.placeholder.com/200" alt="Profile Picture">
+    </div>
+  </div>
 
-  <section id="gallery">
-    <h2>My Gallery</h2>
-    <img id="galleryImage" src="https://via.placeholder.com/200?text=1" alt="Gallery Image">
-    <br>
-    <button onclick="previousImage()">Previous</button>
-    <button onclick="nextImage()">Next</button>
-  </section>
+  <!-- Hobbies Modal -->
+  <div id="hobbiesModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('hobbiesModal')">&times;</span>
+      <h2>My Hobbies</h2>
+      <div class="hobby-cards">
+        <div class="hobby-card">Reading</div>
+        <div class="hobby-card">Coding</div>
+        <div class="hobby-card">Gaming</div>
+      </div>
+    </div>
+  </div>
 
+  <!-- Gallery Modal -->
+  <div id="galleryModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('galleryModal')">&times;</span>
+      <h2>Gallery</h2>
+      <img id="galleryImage" src="https://via.placeholder.com/300x200?text=1" alt="Gallery Image">
+      <div class="gallery-buttons">
+        <button onclick="previousImage()">Previous</button>
+        <button onclick="nextImage()">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Blog Modal -->
+  <div id="blogModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('blogModal')">&times;</span>
+      <h2>Blog</h2>
+      <p>Check out my latest posts on my <a href="blog/index.html">Blog Homepage</a>.</p>
+    </div>
+  </div>
+
+  <!-- ================= Contact Section ================= -->
   <section id="contact">
     <h2>Contact Me</h2>
     <form id="contactForm">
@@ -66,11 +106,28 @@
     </form>
   </section>
 
-  <section id="blog">
-    <h2>My Blog</h2>
-    <p>Check out my latest posts on my <a href="blog/index.html">Blog Homepage</a>.</p>
-  </section>
-
+  <!-- ================= Scripts ================= -->
   <script src="script.js"></script>
+  <script>
+    // Open a modal
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = 'block';
+    }
+
+    // Close a modal
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = 'none';
+    }
+
+    // Close modal when clicking outside content
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
