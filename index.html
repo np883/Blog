@@ -1,191 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Neve's Nook</title>
-
-  <!-- Google Fonts for whimsical serif style -->
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Modular CSS files -->
-  <link rel="stylesheet" href="style/base.css">        <!-- Global styles (fonts, body, headings) -->
-  <link rel="stylesheet" href="style/layout.css">      <!-- Grid & section layouts -->
-  <link rel="stylesheet" href="style/tiles.css">       <!-- Homepage tiles -->
-  <link rel="stylesheet" href="style/modals.css">      <!-- Modals styling -->
-  <link rel="stylesheet" href="style/featured.css">    <!-- Featured blog posts -->
-  <link rel="stylesheet" href="style/reviews.css">    <!-- Featured blog posts -->
-  <link rel="stylesheet" href="style/contact.css">     <!-- Contact form -->
+  <meta charset="UTF-8">
+  <title>My Cozy Cottagecore Site</title>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Book Reviews specific CSS -->
+  <link rel="stylesheet" href="style/reviews.css">
+  <!-- Font Awesome for star ratings -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  
-<!-- ================= Fixed Top Navigation Banner ================= -->
-<header id="topBanner">
-  <nav class="banner-nav">
-    <a href="#aboutSection">About Me</a>
-    <span class="divider">|</span>
-    <a href="#hobbiesSection">Hobbies</a>
-    <span class="divider">|</span>
-    <a href="#gallerySection">Gallery</a>
-    <span class="divider">|</span>
-    <a href="#blogSection">Blog</a>
-  </nav>
-</header>
+  <!-- ================= Top Banner Navigation ================= -->
+  <header id="topBanner">
+    <nav class="banner-nav">
+      <a href="#aboutSection">About Me</a>
+      <span class="divider">|</span>
+      <a href="#hobbiesSection">Hobbies</a>
+      <span class="divider">|</span>
+      <a href="#gallerySection">Gallery</a>
+      <span class="divider">|</span>
+      <a href="#blogSection">Blog</a>
+      <span class="divider">|</span>
+      <a href="#bookReviews">Reviews</a>
+    </nav>
+  </header>
 
+  <!-- ================= About Me Section ================= -->
+  <section id="aboutSection">
+    <h2>About Me</h2>
+    <p>Welcome to my cozy corner of the web! I love books, stationary, and whimsical adventures.</p>
+  </section>
 
+  <!-- ================= Hobbies Section ================= -->
+  <section id="hobbiesSection">
+    <h2>Hobbies</h2>
+    <p>Here are some things I enjoy doing in my free time:</p>
+    <ul>
+      <li>Reading fantasy novels</li>
+      <li>Sketching and journaling</li>
+      <li>Visiting cozy cafes</li>
+    </ul>
+  </section>
 
-  <!-- ================= Navigation ================= -->
-  <nav>
-    <a href="#tiles">Home</a>
-    <a href="#contact">Contact</a>
-    <a href="blog/index.html">Blog</a>
-  </nav>
-
-  <!-- ================= Homepage Tiles ================= -->
-  <section id="tiles">
-    <!-- Each tile opens a modal -->
-    <div class="tile" onclick="openModal('aboutModal')">
-      <h2>About Me</h2>
-      <p>Click to learn more about me!</p>
-    </div>
-
-    <div class="tile" onclick="openModal('hobbiesModal')">
-      <h2>Hobbies</h2>
-      <p>Click to explore my favorite pastimes!</p>
-    </div>
-
-    <div class="tile" onclick="openModal('galleryModal')">
-      <h2>Gallery</h2>
-      <p>Click to view my cozy snapshots!</p>
-    </div>
-
-    <div class="tile" onclick="openModal('blogModal')">
-      <h2>Blog</h2>
-      <p>Click to read my latest posts!</p>
+  <!-- ================= Gallery Section ================= -->
+  <section id="gallerySection">
+    <h2>Gallery</h2>
+    <p>Some snapshots of my cozy life and creative projects:</p>
+    <div class="gallery">
+      <img src="images/gallery1.jpg" alt="Gallery Image 1">
+      <img src="images/gallery2.jpg" alt="Gallery Image 2">
+      <img src="images/gallery3.jpg" alt="Gallery Image 3">
     </div>
   </section>
 
-  <!-- ================= Modals ================= -->
-  <!-- About Me Modal -->
-  <div id="aboutModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('aboutModal')">&times;</span>
-      <h2>About Me</h2>
-      <p>Hi! I'm Neve, a cozy web developer exploring whimsical and cottagecore designs.</p>
-      <img src="images/profile.jpg" alt="Profile Picture">
-    </div>
-  </div>
-
-  <!-- Hobbies Modal -->
-  <div id="hobbiesModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('hobbiesModal')">&times;</span>
-      <h2>My Hobbies</h2>
-      <div class="hobby-cards">
-        <div class="hobby-card">Reading</div>
-        <div class="hobby-card">Coding</div>
-        <div class="hobby-card">Gaming</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Gallery Modal -->
-  <div id="galleryModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('galleryModal')">&times;</span>
-      <h2>Gallery</h2>
-      <img id="galleryImage" src="images/gallery1.jpg" alt="Gallery Image">
-      <div class="gallery-buttons">
-        <button onclick="previousImage()">Previous</button>
-        <button onclick="nextImage()">Next</button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Blog Modal -->
-  <div id="blogModal" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('blogModal')">&times;</span>
-      <h2>Blog</h2>
-      <p>Check out my latest posts on my <a href="blog/index.html">Blog Homepage</a>.</p>
-    </div>
-  </div>
-
-  <!-- ================= Featured Blog Posts ================= -->
-  <section id="featuredBlog">
-    <h2>Latest Blog Posts</h2>
-    <p>Check out my latest thoughts and web projects:</p>
-    <!-- Container for dynamically loaded featured posts -->
-    <div id="featuredPostsContainer" class="featured-posts-grid"></div>
+  <!-- ================= Blog Section ================= -->
+  <section id="blogSection">
+    <h2>Blog</h2>
+    <p>Check out my latest posts on my <a href="blog/index.html">Blog Homepage</a>.</p>
   </section>
 
-<!-- ================= Book Reviews Section ================= -->
-<section id="bookReviews">
-  <h2>Book Reviews</h2>
-  <p>Explore my latest reads! Filter by genre or trope using the buttons below:</p>
+  <!-- ================= Book Reviews Section ================= -->
+  <section id="bookReviews">
+    <h2>Book Reviews</h2>
+    <p>Explore my latest reads! Check out all reviews <a href="reviews/index.html">here</a>, or browse some featured books below:</p>
 
-  <!-- Filter Buttons -->
-  <div id="reviewFilters" class="filter-buttons">
-    <button data-filter="all" class="active">All</button>
-    <button data-filter="fantasy">Fantasy</button>
-    <button data-filter="romance">Romance</button>
-    <button data-filter="sci-fi">Sci-Fi</button>
-    <button data-filter="mystery">Mystery</button>
-    <button data-filter="cozy">Cozy</button>
-  </div>
+    <!-- Reviews Container -->
+    <div id="reviewsContainer" class="reviews-grid"></div>
 
-  <!-- Sorting & Recommendation Controls -->
-  <div id="reviewControls" class="review-controls">
-    <label for="sortSelect">Sort by:</label>
-    <select id="sortSelect">
-      <option value="dateDesc">Date: Newest → Oldest</option>
-      <option value="dateAsc">Date: Oldest → Newest</option>
-      <option value="ratingDesc">Rating: High → Low</option>
-      <option value="ratingAsc">Rating: Low → High</option>
-    </select>
+    <!-- Filter Buttons -->
+    <div id="reviewFilters" class="filter-buttons">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="fantasy">Fantasy</button>
+      <button data-filter="romance">Romance</button>
+      <button data-filter="sci-fi">Sci-Fi</button>
+      <button data-filter="mystery">Mystery</button>
+      <button data-filter="cozy">Cozy</button>
+    </div>
 
-    <label><input type="checkbox" id="recommendFilter"> Show only recommended</label>
-  </div>
+    <!-- Sorting & Recommendation Controls -->
+    <div id="reviewControls" class="review-controls">
+      <label for="sortSelect">Sort by:</label>
+      <select id="sortSelect">
+        <option value="dateDesc">Date: Newest → Oldest</option>
+        <option value="dateAsc">Date: Oldest → Newest</option>
+        <option value="ratingDesc">Rating: High → Low</option>
+        <option value="ratingAsc">Rating: Low → High</option>
+      </select>
 
-  <!-- Reviews Container -->
-  <div id="reviewsContainer" class="reviews-grid"></div>
-</section>
-
-<!-- Link reviews.js at the end of body -->
-<script src="script/reviews.js"></script>
-
-
-  
-  <!-- ================= Contact Section ================= -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
+      <label><input type="checkbox" id="recommendFilter"> Show only recommended</label>
+    </div>
   </section>
+
+  <!-- ================= Footer Section ================= -->
+  <footer>
+    <p>© 2025 My Cozy Cottagecore Site</p>
+    <div class="social-links">
+      <a href="https://www.tiktok.com/@yourhandle" target="_blank">TikTok</a>
+      <a href="https://www.instagram.com/yourhandle" target="_blank">Instagram</a>
+      <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+    </div>
+  </footer>
 
   <!-- ================= Scripts ================= -->
-  <!-- Modular JS files -->
-  <script src="script/modals.js"></script>
-  <script src="script/gallery.js"></script>
-  <script src="blog/posts.js"></script>
-  <script src="script/blog.js"></script>
-  <script src="script/main.js"></script>
-
+  <!-- Reviews JS handles book reviews rendering, filtering, sorting -->
+  <script src="script/reviews.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
