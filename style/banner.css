@@ -1,0 +1,31 @@
+/* ========== Banner Navigation ========== */
+#topBanner {
+  position: sticky;
+  top: 0;
+  background-color: #355E3B; /* Forest green strip */
+  color: #F4F4ED; /* White text */
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.banner-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.banner-nav a {
+  color: #F4F4ED;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.banner-nav a:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  color: #F4F4ED;
+  margin: 0 5px;
+}
