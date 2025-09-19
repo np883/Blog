@@ -58,3 +58,45 @@
   margin-bottom: 10px;
   object-fit: cover;
 }
+
+/* ------------------- Single Blog Post ------------------- */
+.single-post {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+
+.single-post h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.single-post p {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.single-post .post-image {
+  width: 100%;
+  border-radius: 12px;
+  margin: 20px 0;
+  object-fit: cover;
+}
+
+/* Navigation between posts */
+.post-nav {
+  margin-top: 40px;
+  text-align: center;
+}
+.post-nav a {
+  color: #2F4F4F;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+.post-nav a:hover {
+  color: #A3B18A;
+}
+
