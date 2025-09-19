@@ -12,21 +12,32 @@
     <a href="index.html">Blog</a>
   </nav>
 
-  <!-- Blog Homepage -->
   <section>
-    <h1>My Blog</h1>
-    <p>Welcome to my blog! Here are my latest posts:</p>
+  <h1>My Blog</h1>
+  <p>Welcome to my blog! Here are my latest posts:</p>
 
-    <div class="post">
-      <h3><a href="post1.html">My First Blog Post</a></h3>
-      <p>This is a short preview of my first blog post. Click to read more...</p>
-    </div>
+  <!-- Dynamic blog posts will appear here -->
+  <div id="postsContainer"></div>
+</section>
 
-    <div class="post">
-      <h3><a href="post2.html">Learning Web Development</a></h3>
-      <p>Today I learned how to structure a website using HTML, CSS, and JS...</p>
-    </div>
-  </section>
+<!-- Add this at the end of the body -->
+<script src="posts.js"></script>
+<script>
+  const container = document.getElementById("postsContainer");
 
+  posts.forEach(post => {
+    const postDiv = document.createElement("div");
+    postDiv.classList.add("post");
+
+    postDiv.innerHTML = `
+      <h3><a href="${post.file}">${post.title}</a></h3>
+      <p><em>${post.date}</em></p>
+      <p>${post.preview}</p>
+    `;
+
+    container.appendChild(postDiv);
+  });
+</script>
+  
 </body>
 </html>
