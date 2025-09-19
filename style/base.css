@@ -1,25 +1,104 @@
-/* ========== Base Styles ========== */
-/* Global resets, typography, and shared colors */
+/* =======================
+   BASE STYLES
+   Global resets, variables, typography, utilities
+   ======================= */
+
+/* ---------- Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Georgia', serif;
-  margin: 0;
-  padding: 0;
-  background-color: #F4F4ED; /* cozy off-white */
-  color: #2F4F4F; /* muted gray-green text */
+  background-color: #FAFAF5; /* soft neutral */
+  color: #2F4F4F; /* dark forest green */
   line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
-  font-family: 'Palatino Linotype', serif;
-  color: #355E3B; /* forest green headings */
+/* Remove bullet points and padding for lists */
+ul, ol {
+  list-style: none;
+  padding-left: 0;
 }
 
+/* Remove underline by default */
 a {
-  color: #355E3B;
   text-decoration: none;
+  color: inherit;
 }
 
-a:hover {
-  color: #A3B18A; /* sage hover color */
+/* Make images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- Variables (colors, spacing) ---------- */
+:root {
+  /* Core palette */
+  --green-dark: #2E4E32;
+  --green-forest: #344E41;
+  --green-sage: #A3B18A;
+  --green-light: #DAD7CD;
+
+  /* Accent */
+  --gold-star: #FFD700;
+
+  /* Neutrals */
+  --neutral-bg: #FAFAF5;
+  --neutral-light: #F4F4ED;
+  --neutral-dark: #2F4F4F;
+
+  /* Shadows */
+  --shadow-soft: 0 6px 15px rgba(0,0,0,0.08);
+  --shadow-strong: 0 10px 20px rgba(0,0,0,0.12);
+
+  /* Spacing */
+  --section-padding: 60px;
+  --radius-large: 20px;
+  --radius-medium: 12px;
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4 {
+  font-family: 'Merriweather', serif;
+  color: var(--neutral-dark);
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* ---------- Utilities ---------- */
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: var(--radius-medium);
+  background-color: var(--green-dark);
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: var(--green-sage);
+  transform: translateY(-2px);
+}
+
+/* Divider utility */
+.divider {
+  color: rgba(0,0,0,0.2);
+  margin: 0 10px;
 }
