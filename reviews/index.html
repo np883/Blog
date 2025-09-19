@@ -2,62 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Book Reviews</title>
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../style/reviews.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>Book Reviews</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-  <!-- Navigation / Banner -->
   <header id="topBanner">
     <nav class="banner-nav">
-      <a href="../index.html#aboutSection">About Me</a>
-      <span class="divider">|</span>
-      <a href="../index.html#hobbiesSection">Hobbies</a>
-      <span class="divider">|</span>
-      <a href="../index.html#gallerySection">Gallery</a>
-      <span class="divider">|</span>
-      <a href="../index.html#blogSection">Blog</a>
-      <span class="divider">|</span>
-      <a href="../index.html#bookReviews">Reviews</a>
+      <a href="../index.html#about">Home</a> <span class="divider">|</span>
+      <a href="index.html">Reviews</a>
     </nav>
   </header>
 
-  <main>
-    <section id="bookReviews">
-      <h1>Book Reviews</h1>
-      <p>Explore my latest reads! Filter by genre, sort by rating or date, and see recommended books.</p>
+  <section>
+    <h1>Book Reviews</h1>
 
-      <!-- Filter Buttons -->
-      <div id="reviewFilters" class="filter-buttons">
-        <button data-filter="all" class="active">All</button>
-        <button data-filter="fantasy">Fantasy</button>
-        <button data-filter="romance">Romance</button>
-        <button data-filter="sci-fi">Sci-Fi</button>
-        <button data-filter="mystery">Mystery</button>
-        <button data-filter="cozy">Cozy</button>
-      </div>
+    <div class="filter-bar">
+      <select id="genreFilter"><option value="all">All Genres</option></select>
+      <select id="ratingFilter"><option value="all">All Ratings</option></select>
+      <label><input type="checkbox" id="recommendedFilter"> Recommended Only</label>
+    </div>
 
-      <!-- Sorting & Recommendation Controls -->
-      <div id="reviewControls" class="review-controls">
-        <label for="sortSelect">Sort by:</label>
-        <select id="sortSelect">
-          <option value="dateDesc">Date: Newest → Oldest</option>
-          <option value="dateAsc">Date: Oldest → Newest</option>
-          <option value="ratingDesc">Rating: High → Low</option>
-          <option value="ratingAsc">Rating: Low → High</option>
-        </select>
+    <div id="reviewsContainer" class="reviews-grid"></div>
+  </section>
 
-        <label><input type="checkbox" id="recommendFilter"> Show only recommended</label>
-      </div>
-
-      <!-- Reviews Container -->
-      <div id="reviewsContainer" class="reviews-grid"></div>
-    </section>
-  </main>
-
-  <!-- Include JS -->
-  <script src="../script/reviews.js"></script>
+  <script src="reviews.js"></script>
 </body>
 </html>
