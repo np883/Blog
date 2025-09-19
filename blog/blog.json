@@ -1,0 +1,16 @@
+[
+  {
+    "title": "My First Blog Post",
+    "date": "2025-09-20",
+    "preview": "A short introduction to my first blog post...",
+    "tags": ["webdev", "personal"],
+    "file": "post1.md"
+  },
+  {
+    "title": "Learning Web Development",
+    "date": "2025-09-22",
+    "preview": "Today I learned about HTML, CSS, and JS...",
+    "tags": ["webdev", "tutorial"],
+    "file": "post2.md"
+  }
+]
