@@ -2,9 +2,11 @@
 <html>
 <head>
   <title>My Blog</title>
-  <!-- Google Fonts for whimsical serif style -->
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Modular CSS -->
+
+  <!-- Modular CSS for blog page -->
   <link rel="stylesheet" href="../style/base.css">
   <link rel="stylesheet" href="../style/layout.css">
   <link rel="stylesheet" href="../style/blog.css">
@@ -27,8 +29,10 @@
   </section>
 
   <!-- ================= Scripts ================= -->
+  <!-- Load posts.js first, then create cards dynamically -->
   <script src="posts.js"></script>
   <script>
+    // Grab the container element
     const container = document.getElementById("postsContainer");
 
     // Loop through posts array and create a card for each
